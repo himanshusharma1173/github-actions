@@ -1,4 +1,4 @@
-# My First GitHub Action 🚀  
+# My First GitHub Action 
 
 This repository is created to learn and practice **GitHub Actions**.  
 
