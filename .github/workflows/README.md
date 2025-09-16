@@ -4,5 +4,5 @@ It contains a simple workflow that runs automatically whenever code is **pushed*
 
 - Checkout the repository code  
 - Set up multiple versions of Python (3.8 and 3.9)  
-- Install dependencies (from `requirements.txt`, if available)  
+- Install dependencies (from `requirements.txt`)  
 - Run tests using **pytest** 
