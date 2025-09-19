@@ -1,4 +1,4 @@
-name: Self-Hosted Python Test
+name: Self-Hosted Python Tests
 
 on: [push]
 
@@ -9,19 +9,18 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Set up Python
+      - name: Verify Python & pytest
         run: |
-          sudo apt update
-          sudo apt install -y python3 python3-pip
-          python3 -m pip install --upgrade pip
+          python3 --version
+          pytest --version
 
       - name: Install dependencies (if any)
         run: |
           if [ -f requirements.txt ]; then
-            pip3 install -r requirements.txt
+            pip3 install -r requirements.txt --break-system-packages || true
           else
             echo "No requirements.txt found, skipping install"
           fi
 
       - name: Run tests
-        run: pytest || echo "pytest not installed"
+        run: pytest
