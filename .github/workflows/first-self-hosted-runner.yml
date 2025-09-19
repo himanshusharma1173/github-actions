@@ -1,4 +1,4 @@
-name: Self-Hosted Python Tests
+name: Self-Hosted Python Test
 
 on: [push]
 
